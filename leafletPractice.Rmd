@@ -1,0 +1,16 @@
+---
+title: "leafletPractice"
+author: "Kevin Roche"
+date: "26/10/2021"
+output:
+  prettydoc::html_pretty:
+    theme: architect
+    highlight: github
+    fig_height: 8
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Leaflet Practice

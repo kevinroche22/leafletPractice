@@ -1,1 +1,1 @@
-# leafletPractice
+This repository just stores the results of messing around with R's leaflet package a little bit. You can view the published document [here.](https://rpubs.com/kevinroche22/leafletPractice)

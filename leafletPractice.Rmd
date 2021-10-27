@@ -13,4 +13,51 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## Leaflet Practice
+## Synopsis
+
+Just experimenting with leaflet to get an idea of its functionality. 
+
+I completed my bachelor's at Wilfrid Laurier University and my master's at McMaster University, so I thought it would be fun to plot them using the school logo as their icon.
+
+## Load Library
+
+```{r}
+## Load leaflet
+library(leaflet)
+```
+
+## Load In School Logos
+
+```{r}
+## Add school logos
+laurierLogo <- makeIcon(iconUrl="https://www.wlu.ca/images/general/laurier-crest-rev.jpg", 
+                        iconWidth = 32, 
+                        iconHeight = 32,
+                        iconAnchorX = 0, 
+                        iconAnchorY = 72)
+
+macLogo <- makeIcon(iconUrl="https://www.vhv.rs/dpng/d/215-2156137_mcmaster-university-logo-png-mcmaster-university-logo-transparent.png", 
+                        iconWidth = 48, 
+                        iconHeight = 32,
+                        iconAnchorX = 0, 
+                        iconAnchorY = 72)
+```
+
+## Plot on map
+
+```{r}
+## Plot 
+leaflet() %>% 
+        addTiles() %>% 
+        addMarkers(lng = -79.917996328, 
+                   lat = 43.25799896, 
+                   popup = "McMaster University",
+                   icon = macLogo) %>% 
+        addMarkers(lng = -80.5230112413,
+                   lat = 43.4718664459, 
+                   popup = "Wilfrid Laurier University",
+                   icon = laurierLogo)
+```
+
+
+
